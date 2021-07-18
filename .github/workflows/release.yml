@@ -33,7 +33,7 @@ jobs:
     
     # Installing Dependencies
     - name: Installing Dependencies
-      run: npm ci
+      run: yarn install
     - name: Build
       run: cargo build --release --locked
     - name: Upload binaries to release
