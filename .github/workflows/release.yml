@@ -8,18 +8,15 @@ on:
 
 jobs:
   publish:
-    name: Publish for ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
+    name: Publish 
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         include:
-          - os: ubuntu-latest
             artifact_name: mysql-syncer
             asset_name: mysql-sync-linux
-          - os: windows-latest
             artifact_name: mysql-syncer.exe
             asset_name: sql-sync-windows.exe
-          - os: macos-latest
             artifact_name: mysql-syncer
             asset_name: mysql-sync-macos
 
