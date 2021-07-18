@@ -25,6 +25,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    # Setting up Node
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.16.1'
+    
+    # Installing Dependencies
+    - name: Installing Dependencies
+      run: npm ci
     - name: Build
       run: cargo build --release --locked
     - name: Upload binaries to release
